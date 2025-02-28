@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".login.LoginPage">
+
+    <ImageView
+        android:id="@+id/chatIcon"
+        android:layout_width="@dimen/_80sdp"
+        android:layout_height="@dimen/_80sdp"
+        android:layout_marginTop="@dimen/_70sdp"
+        android:src="@drawable/chat_ic"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Welcome to Chating App"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_20sdp"
+        app:layout_constraintEnd_toEndOf="@id/chatIcon"
+        app:layout_constraintStart_toStartOf="@id/chatIcon"
+        app:layout_constraintTop_toBottomOf="@id/chatIcon" />
+
+    <EditText
+        android:id="@+id/et_userId"
+        style="@style/editTextStyle"
+        android:layout_width="@dimen/_290sdp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:hint="Email address"
+        android:inputType="textEmailAddress"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt" />
+
+    <EditText
+        android:id="@+id/et_password"
+        style="@style/editTextStyle"
+        android:layout_width="@dimen/_290sdp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:background="@drawable/bg_corner_round_edit_text"
+        android:hint="Password"
+        app:layout_constraintEnd_toEndOf="@id/et_userId"
+        app:layout_constraintStart_toStartOf="@id/et_userId"
+        app:layout_constraintTop_toBottomOf="@+id/et_userId" />
+
+    <Button
+        android:id="@+id/btn_login"
+        style="@style/buttonStyle"
+        android:layout_width="@dimen/_290sdp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:text="Login"
+        app:layout_constraintEnd_toEndOf="@id/et_password"
+        app:layout_constraintStart_toStartOf="@id/et_password"
+        app:layout_constraintTop_toBottomOf="@id/et_password" />
+
+    <Button
+        android:id="@+id/btn_Create_Account"
+        android:layout_width="@dimen/_290sdp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:background="@drawable/bg_corner_round_button_white"
+        android:text="Create Account"
+        app:layout_constraintEnd_toEndOf="@id/btn_login"
+        app:layout_constraintStart_toStartOf="@id/btn_login"
+        app:layout_constraintTop_toBottomOf="@id/btn_login" />
+
+    <TextView
+        android:id="@+id/txt_Forgot_Password"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_25sdp"
+        android:text="Forgot Password ?"
+        android:textColor="#3355ff"
+        app:layout_constraintEnd_toEndOf="@id/btn_Create_Account"
+        app:layout_constraintStart_toStartOf="@id/btn_Create_Account"
+        app:layout_constraintTop_toBottomOf="@id/btn_Create_Account" />
+</androidx.constraintlayout.widget.ConstraintLayout>
